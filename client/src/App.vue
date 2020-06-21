@@ -1,10 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
+    <v-app-bar app color="primary" dark>
       <div class="d-flex align-center">
         <v-img
           alt="Vuetify Logo"
@@ -32,25 +28,31 @@
         target="_blank"
         text
       >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
+        <span class="mr-2">Latest Releases</span>
+      </v-btn>
+      <v-btn
+        href="https://github.com/vuetifyjs/vuetify/releases/latest"
+        target="_blank"
+        text
+      >
+        <span class="mr-2">Trending</span>
       </v-btn>
     </v-app-bar>
 
-    <v-content>
-      <HelloWorld/>
-    </v-content>
+    <v-main>
+      <BookList />
+    </v-main>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import BookList from './components/Booklist/BookList.vue';
 
 export default {
   name: 'App',
 
   components: {
-    HelloWorld,
+    BookList,
   },
 
   data: () => ({
